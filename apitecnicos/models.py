@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class Tecnico(models.Model):
     id_empleado = models.IntegerField(primary_key=True)
