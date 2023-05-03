@@ -4,8 +4,11 @@ from .models import *
 class TecnicoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tecnico
-        fields = ('id_empleado','dni','nombre','apellido','categoria','contrasena','id_taller')
-        read_only_fields = ('id_empleado','dni','nombre','apellido','categoria','contrasena','id_taller')
+        fields = ('id_empleado','nombre_completo','dni','nombre_usuario','categoria','contrasena',
+        'tipo','status','branch','id_contacto','id_direccion','categoria')
+        read_only_fields = ('id_empleado','nombre_completo','dni','nombre_usuario','categoria','contrasena',
+        'tipo','status','branch','id_contacto','id_direccion','categoria',)
+
 
 class TallerSerializer(serializers.ModelSerializer):
     class Meta:

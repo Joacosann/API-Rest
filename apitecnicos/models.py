@@ -2,13 +2,18 @@ from django.db import models
 
 # Create your models here.
 class Tecnico(models.Model):
-    id_empleado = models.CharField(max_length=4, primary_key=True)
-    dni = models.CharField(max_length=8) 
-    nombre = models.CharField(max_length=30)
-    apellido = models.CharField(max_length=30)
+    id_empleado = models.IntegerField(primary_key=True)
+    nombre_completo = models.CharField(max_length=50)
+    dni = models.CharField(max_length=10) 
+    nombre_usuario = models.CharField(max_length=15)
+    contrasena = models.CharField(max_length=15)
+    tipo = models.CharField(max_length=15)
+    status = models.CharField(max_length=10)
+    branch = models.CharField(max_length=4)
+    id_contacto = models.IntegerField()
+    id_direccion = models.IntegerField()
     categoria = models.CharField(max_length=1)
-    contrasena = models.CharField(max_length=20)
-    id_taller = models.CharField(max_length=4)
+    
     
 class Taller(models.Model):
     id_taller = models.CharField(max_length=4)

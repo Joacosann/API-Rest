@@ -3,7 +3,8 @@ from .models import *
 
 # Register your models here.
 class TecnicoAdmin(admin.ModelAdmin):
-    list_display = ('id_empleado','dni','nombre','apellido','categoria','contrasena','id_taller')
+    list_display = ('id_empleado', 'nombre_completo', 'dni', 'nombre_usuario', 'categoria', 'contrasena',
+    'tipo', 'status', 'branch', 'id_contacto', 'id_direccion', 'categoria')
 
 class TallerAdmin(admin.ModelAdmin):
     list_display = ('id_taller','nombre','id_direccion','id_sucursal','mail')
