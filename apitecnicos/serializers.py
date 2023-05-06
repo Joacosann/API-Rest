@@ -10,12 +10,6 @@ class TecnicoSerializer(serializers.ModelSerializer):
         'tipo','status','branch','id_contacto','id_direccion','categoria',)
 
 
-class TallerSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Taller
-        fields = ('id_taller','nombre','id_direccion','id_sucursal','mail')
-        read_only_fields = ('id_taller','nombre','id_direccion','id_sucursal','mail')
-
 class SucursalSerializer(serializers.ModelSerializer):
     class Meta:
         model = Sucursal

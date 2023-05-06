@@ -9,13 +9,6 @@ class TecnicoViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.AllowAny]
     serializer_class = TecnicoSerializer
 
-class TallerViewSet(viewsets.ModelViewSet):
-    # Conjunto de datos
-    queryset = Taller.objects.all()
-    # Clases que tienen permiso de consulta
-    permission_classes = [permissions.AllowAny]
-    serializer_class = TallerSerializer
-
 class SucursalViewSet(viewsets.ModelViewSet):
     # Conjunto de datos
     queryset = Sucursal.objects.all()
