@@ -16,6 +16,5 @@ class DireccionAdmin(admin.ModelAdmin):
     list_display = ('id_direccion','calle','altura','provincia','pais')
 
 admin.site.register(Tecnico,TecnicoAdmin)
-admin.site.register(Taller,TallerAdmin)
 admin.site.register(Sucursal,SucursalAdmin)
 admin.site.register(Direccion,DireccionAdmin)

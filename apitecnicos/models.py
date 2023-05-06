@@ -15,14 +15,6 @@ class Tecnico(models.Model):
     id_direccion = models.IntegerField()
     categoria = models.CharField(max_length=1)
     
-    
-class Taller(models.Model):
-    id_taller = models.CharField(max_length=4)
-    nombre = models.CharField(max_length=20)
-    id_direccion = models.CharField(max_length=20)
-    id_sucursal = models.CharField(max_length=20)
-    mail =models.CharField(max_length=20)
-    
 class Sucursal(models.Model):
     id_sucursal = models.CharField(max_length=4)
     nombre = models.CharField(max_length=20)
