@@ -1,13 +1,13 @@
 from rest_framework import serializers
 from .models import *
 
-class TecnicoSerializer(serializers.ModelSerializer):
+class UsuarioSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Tecnico
+        model = Usuario
         fields = ('id_empleado','nombre_completo','dni','nombre_usuario','categoria','contrasena',
-        'tipo','status','branch','id_contacto','id_direccion','categoria')
+        'tipo','branch','id_contacto','id_direccion','categoria')
         read_only_fields = ('id_empleado','nombre_completo','dni','nombre_usuario','categoria','contrasena',
-        'tipo','status','branch','id_contacto','id_direccion','categoria',)
+        'tipo','branch','id_contacto','id_direccion','categoria',)
 
 
 class SucursalSerializer(serializers.ModelSerializer):
@@ -19,5 +19,11 @@ class SucursalSerializer(serializers.ModelSerializer):
 class DireccionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Direccion
-        fields = ('id_direccion','calle','altura','provincia','pais')
-        read_only_fields = ('id_direccion','calle','altura','provincia','pais')
+        fields = ('id_direccion','calle','ciudad','estado','codigo_postal','pais','altura')
+        read_only_fields = ('id_direccion','calle','ciudad','estado','codigo_postal','pais','altura')
+
+class ContactoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Contacto
+        fields = ('id_contacto','email','codigo_telefono','numero_telefono')
+        read_only_fields = ('id_contacto','email','codigo_telefono','numero_telefono')
