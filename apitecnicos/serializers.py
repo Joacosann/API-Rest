@@ -13,8 +13,8 @@ class UsuarioSerializer(serializers.ModelSerializer):
 class SucursalSerializer(serializers.ModelSerializer):
     class Meta:
         model = Sucursal
-        fields = ('id_sucursal','nombre','id_direccion','telefono')
-        read_only_fields = ('id_sucursal','nombre','id_direccion','telefono')
+        fields = ('id_sucursal','nombre','calle','altura','localidad','provincia','cod_postal')
+        read_only_fields = ('id_sucursal','nombre','calle','altura','localidad','provincia','cod_postal')
 
 class DireccionSerializer(serializers.ModelSerializer):
     class Meta:

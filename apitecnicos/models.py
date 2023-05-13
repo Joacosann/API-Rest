@@ -18,10 +18,14 @@ class Direccion(models.Model):
     altura = models.CharField(max_length=5)
 
 class Sucursal(models.Model):
-    id_sucursal = models.CharField(max_length=4, primary_key=True)
-    nombre = models.CharField(max_length=20)
-    id_direccion = models.ForeignKey(Direccion, on_delete=models.CASCADE)
-    telefono = models.CharField(max_length=15)
+    id_sucursal = models.IntegerField(primary_key=True)
+    nombre = models.CharField(max_length=20, null=True, blank=True)
+    calle = models.CharField(max_length=50, null=True, blank=True)
+    altura = models.CharField(max_length=4, null=True, blank=True)
+    localidad = models.CharField(max_length=50, null=True, blank=True)
+    provincia = models.CharField(max_length=30, null=True, blank=True)
+    cod_postal = models.IntegerField(null=True, blank=True)
+
 
 class Usuario(models.Model):
     id_empleado = models.IntegerField(primary_key=True)

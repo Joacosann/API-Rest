@@ -7,7 +7,8 @@ class UsuarioAdmin(admin.ModelAdmin):
     'tipo','branch', 'id_contacto', 'id_direccion', 'categoria')
 
 class SucursalAdmin(admin.ModelAdmin):
-    list_display = ('id_sucursal','nombre','id_direccion','telefono')
+    list_display = ('id_sucursal','nombre','calle','altura','localidad','provincia','cod_postal')
+
 
 class DireccionAdmin(admin.ModelAdmin):
     list_display = ('id_direccion','calle','ciudad','estado','codigo_postal','pais','altura')
