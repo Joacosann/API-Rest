@@ -16,7 +16,7 @@ class SucursalViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.AllowAny]
     serializer_class = SucursalSerializer
     
-class DireccionViewSet(viewsets.ModelViewSet):
+""" class DireccionViewSet(viewsets.ModelViewSet):
     # Conjunto de datos
     queryset = Direccion.objects.all()
     # Clases que tienen permiso de consulta
@@ -28,4 +28,4 @@ class ContactoViewSet(viewsets.ModelViewSet):
     queryset = Contacto.objects.all()
     # Clases que tienen permiso de consulta
     permission_classes = [permissions.AllowAny]
-    serializer_class = ContactoSerializer
+    serializer_class = ContactoSerializer """

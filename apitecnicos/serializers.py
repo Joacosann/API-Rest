@@ -16,7 +16,7 @@ class SucursalSerializer(serializers.ModelSerializer):
         fields = ('id_sucursal','nombre','calle','altura','localidad','provincia','cod_postal')
         read_only_fields = ('id_sucursal','nombre','calle','altura','localidad','provincia','cod_postal')
 
-class DireccionSerializer(serializers.ModelSerializer):
+""" class DireccionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Direccion
         fields = ('id_direccion','calle','ciudad','estado','codigo_postal','pais','altura')
@@ -26,4 +26,4 @@ class ContactoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Contacto
         fields = ('id_contacto','email','codigo_telefono','numero_telefono')
-        read_only_fields = ('id_contacto','email','codigo_telefono','numero_telefono')
+        read_only_fields = ('id_contacto','email','codigo_telefono','numero_telefono') """
