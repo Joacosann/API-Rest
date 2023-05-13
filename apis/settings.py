@@ -84,11 +84,22 @@ WSGI_APPLICATION = 'apis.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-DATABASES = {
+""" DATABASES = {
     'default': dj_database_url.config(
         default='sqlite:///db.sqlite3',        
         conn_max_age=600    
     )
+} """
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'pginsomnia',
+        'USER': 'admin',
+        'PASSWORD': 'q5zYKvs6OEnSPRvgmyPgxQpNyYqRlDlQ',
+        'HOST': 'dpg-chdpvgm7avj0djjk82t0-a.oregon-postgres.render.com',
+        'PORT': '5432',
+    }
 }
 
 
