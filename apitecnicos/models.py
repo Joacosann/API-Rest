@@ -39,7 +39,38 @@ class Usuario(models.Model):
     id_contacto = models.IntegerField()
     id_direccion = models.IntegerField()
     categoria = models.CharField(max_length=1, null=True, blank=True)
-    
+
+# ---------------------- VEHICULO ----------------------------- #
+class Vehicle(models.Model):
+    g08_id = models.IntegerField(primary_key=True)
+    g08_model_id = models.IntegerField()
+    g08_paperwork_id = models.IntegerField()
+    g08_plate = models.CharField(max_length=10)
+    g08_purchase_price = models.FloatField(null=True, blank=True)
+    g08_sell_price = models.FloatField(null=True, blank=True)
+    g08_status = models.CharField(max_length=40)
+    g08_technical_score = models.FloatField(null=True, blank=True)
+    g08_branch = models.CharField(max_length=10, null=True, blank=True)
+    g08_kilometers = models.CharField(max_length=10)
+    g08_message = models.CharField( null=True, blank=True)
+    g08_combustion_type = models.CharField(max_length=40)
+
+
+class Model(models.Model):
+    g06_id = models.IntegerField(primary_key=True)
+    g06_brand = models.CharField(max_length=20)
+    g06_model = models.CharField(max_length=20)
+    g06_year = models.CharField(max_length=4)
+    g06_base_price = models.FloatField()
+    g06_origin = models.CharField(max_length=30)
+
+
+class Paperwork(models.Model):
+    g07_id = models.IntegerField(primary_key=True)
+    g07_faults_debt = models.FloatField(null=True, blank=True)
+    g07_vpa = models.BooleanField(default=False)
+    g07_rva = models.BooleanField(default=False)
+    g07_vtv = models.BooleanField(default=False)
 
 
 

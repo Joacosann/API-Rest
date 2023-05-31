@@ -15,7 +15,30 @@ class SucursalViewSet(viewsets.ModelViewSet):
     # Clases que tienen permiso de consulta
     permission_classes = [permissions.AllowAny]
     serializer_class = SucursalSerializer
-    
+
+# ---------------------- VEHICULO ----------------------------- #
+class VehicleViewSet(viewsets.ModelViewSet):
+    # Conjunto de datos
+    queryset = Sucursal.objects.all()
+    # Clases que tienen permiso de consulta
+    permission_classes = [permissions.AllowAny]
+    serializer_class = SucursalSerializer
+
+class ModelViewSet(viewsets.ModelViewSet):
+    # Conjunto de datos
+    queryset = Sucursal.objects.all()
+    # Clases que tienen permiso de consulta
+    permission_classes = [permissions.AllowAny]
+    serializer_class = SucursalSerializer
+
+class PaperworkViewSet(viewsets.ModelViewSet):
+    # Conjunto de datos
+    queryset = Sucursal.objects.all()
+    # Clases que tienen permiso de consulta
+    permission_classes = [permissions.AllowAny]
+    serializer_class = SucursalSerializer
+
+
 """ class DireccionViewSet(viewsets.ModelViewSet):
     # Conjunto de datos
     queryset = Direccion.objects.all()
